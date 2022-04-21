@@ -1,10 +1,12 @@
 <?php
-$randomInt = [];
+$randomArray = [];
+$random = 0;
 do{
-  if( !in_array(rand(1, 100), $randomInt) ){
-    array_push($randomInt, rand(1, 100));
+  $random = rand(1, 100);
+  if( !in_array($random, $randomArray) ){
+    array_push($randomArray, $random);
   }
-} while (count($randomInt) < 15);
+} while (count($randomArray) < 15);
 
 ?>
 
@@ -20,7 +22,7 @@ do{
   <h3>Snack 4</h3>
   <pre>
     <?php
-      var_dump($randomInt);
+      var_dump($randomArray);
     ?>
   </pre>
 </body>
